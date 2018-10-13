@@ -24,6 +24,9 @@
                                     <constraint firstAttribute="width" constant="75" id="uDu-Db-yn9"/>
                                 </constraints>
                                 <state key="normal" image="paper"/>
+                                <connections>
+                                    <action selector="paperTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="B1a-1q-X3X"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOs-qA-7c7" userLabel="Scissors">
                                 <rect key="frame" x="150" y="191" width="75" height="65"/>
@@ -32,6 +35,9 @@
                                     <constraint firstAttribute="height" constant="65" id="hEf-be-Zyh"/>
                                 </constraints>
                                 <state key="normal" image="scissors"/>
+                                <connections>
+                                    <action selector="scissorsTouched" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPt-qm-Kqd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESK-rE-0An" userLabel="Rock">
                                 <rect key="frame" x="253" y="311" width="75" height="65"/>
@@ -40,6 +46,9 @@
                                     <constraint firstAttribute="height" constant="65" id="kR5-qj-feo"/>
                                 </constraints>
                                 <state key="normal" image="rock"/>
+                                <connections>
+                                    <segue destination="sTQ-2G-No6" kind="presentation" id="yyN-cG-UJs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,14 +64,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="sTQ-2G-No6" kind="presentation" identifier="scissorSegue" id="mQ2-ck-E6e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="178" y="122"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="29e-i6-0Sd">
             <objects>
-                <viewController id="sTQ-2G-No6" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ResultViewController" id="sTQ-2G-No6" customClass="ResultViewController" customModule="Roshamboo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yZs-YL-feX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,4 +120,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="mQ2-ck-E6e"/>
+    </inferredMetricsTieBreakers>
 </document>

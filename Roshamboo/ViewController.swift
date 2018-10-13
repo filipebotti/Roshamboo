@@ -14,6 +14,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func paperTouched() {
+        var controller: ResultViewController
+        
+        controller = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
+        
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    @IBAction func scissorsTouched() {
+        self.performSegue(withIdentifier: "scissorSegue", sender: self)
+    }
 
 
 }
