@@ -89,6 +89,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHo-fW-idB">
                                 <rect key="frame" x="127" y="488" width="121" height="30"/>
                                 <state key="normal" title="Jogar Novamente"/>
+                                <connections>
+                                    <action selector="tryAgain:" destination="sTQ-2G-No6" eventType="touchUpInside" id="G67-XV-Q4C"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZ8-x5-XI1" userLabel="Message">
                                 <rect key="frame" x="166.5" y="373" width="42" height="21"/>
@@ -109,6 +112,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GE3-WG-8h1"/>
                     </view>
+                    <connections>
+                        <outlet property="roshambooImage" destination="bVk-vD-cg4" id="hAo-7g-nLG"/>
+                        <outlet property="roshambooLabel" destination="cZ8-x5-XI1" id="X1V-E8-JQw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFe-ZX-px3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
