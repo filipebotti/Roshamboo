@@ -13,6 +13,10 @@
 		B50F25472172B6FE00E3EB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B50F25462172B6FE00E3EB17 /* Assets.xcassets */; };
 		B50F254A2172B6FE00E3EB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50F25482172B6FE00E3EB17 /* LaunchScreen.storyboard */; };
 		B50F25522172BB1600E3EB17 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50F25512172BB1600E3EB17 /* ResultViewController.swift */; };
+		B5C955BD21A38136004B1B73 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C955BC21A38136004B1B73 /* HistoryViewController.swift */; };
+		B5C955BF21ADB31B004B1B73 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C955BE21ADB31B004B1B73 /* History.swift */; };
+		B5C955C121ADB386004B1B73 /* RoshambooKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C955C021ADB386004B1B73 /* RoshambooKeys.swift */; };
+		B5C955C321ADB475004B1B73 /* RoshambooViewControllerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C955C221ADB475004B1B73 /* RoshambooViewControllerUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B50F25492172B6FE00E3EB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B50F254B2172B6FE00E3EB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50F25512172BB1600E3EB17 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		B5C955BC21A38136004B1B73 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B5C955BE21ADB31B004B1B73 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		B5C955C021ADB386004B1B73 /* RoshambooKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshambooKeys.swift; sourceTree = "<group>"; };
+		B5C955C221ADB475004B1B73 /* RoshambooViewControllerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoshambooViewControllerUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				B50F25482172B6FE00E3EB17 /* LaunchScreen.storyboard */,
 				B50F254B2172B6FE00E3EB17 /* Info.plist */,
 				B50F25512172BB1600E3EB17 /* ResultViewController.swift */,
+				B5C955BC21A38136004B1B73 /* HistoryViewController.swift */,
+				B5C955BE21ADB31B004B1B73 /* History.swift */,
+				B5C955C021ADB386004B1B73 /* RoshambooKeys.swift */,
+				B5C955C221ADB475004B1B73 /* RoshambooViewControllerUtils.swift */,
 			);
 			path = Roshamboo;
 			sourceTree = "<group>";
@@ -138,9 +150,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5C955C321ADB475004B1B73 /* RoshambooViewControllerUtils.swift in Sources */,
 				B50F25422172B6FD00E3EB17 /* ViewController.swift in Sources */,
 				B50F25402172B6FD00E3EB17 /* AppDelegate.swift in Sources */,
 				B50F25522172BB1600E3EB17 /* ResultViewController.swift in Sources */,
+				B5C955BD21A38136004B1B73 /* HistoryViewController.swift in Sources */,
+				B5C955C121ADB386004B1B73 /* RoshambooKeys.swift in Sources */,
+				B5C955BF21ADB31B004B1B73 /* History.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     let options = ["R", "S", "P"]
+    var histories = [History]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +21,13 @@ class ViewController: UIViewController {
     @IBAction func paperTouched() {
         var controller: ResultViewController
         
+        let computerMove = randomValue()
+        
         controller = storyboard?.instantiateViewController(withIdentifier: "ResultViewController") as! ResultViewController
-        controller.computerValue = "P"
-        controller.userValue = randomValue()
+        controller.userValue = "P"
+        controller.computerValue = computerMove
+        
+        addHistory(playerMove: "P", computerMove: computerMove)
         
         self.present(controller, animated: true, completion: nil)
     }
@@ -39,17 +44,31 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let controller = segue.destination as! ResultViewController
         
-        controller.computerValue = randomValue()
-        
-        if segue.identifier != nil {
-            controller.userValue = "S"
-        } else {
-            controller.userValue = "R"
+        if let controller = segue.destination as? ResultViewController {
+            
+            controller.computerValue = randomValue()
+            
+            if segue.identifier != RoshambooKeys.ScissorSegue {
+                controller.userValue = "S"
+            } else {
+                controller.userValue = "R"
+            }
+            
+            addHistory(playerMove: controller.userValue!, computerMove: controller.computerValue!)
+        }
+        else if segue.identifier == RoshambooKeys.HistorySegue {
+            
+            let controller = segue.destination as! HistoryViewController
+            controller.histories = histories
         }
     }
 
+    func addHistory(playerMove: String, computerMove: String) {
+        let won = playerWon(playerMove: playerMove, computerMove: computerMove)
+        let history = History(won: won, playerMove: playerMove, computerMove: computerMove)
+        histories.append(history)
+    }
 
 }
 

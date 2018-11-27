@@ -24,30 +24,11 @@ class ResultViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let result = "\(self.userValue!)\(self.computerValue!)"
-        setLabel(result)
+        self.roshambooLabel.text = getLabel(result)
         setImage(result)
         
         if self.computerValue != self.userValue {
-            self.roshambooLabel.text = userWon() ? "\(self.roshambooLabel!.text!), you won!" : "\(self.roshambooLabel!.text!), you lose!"
-        }
-    }
-    
-    func userWon() -> Bool {
-        print(self.userValue!)
-        print(self.computerValue!)
-        return (self.userValue! == "S" && self.computerValue! == "P") || (self.userValue! == "P" && self.computerValue! == "R") || (self.userValue! == "R" && self.computerValue! == "S")
-    }
-    
-    func setLabel(_ result: String) {
-        switch(result) {
-        case "SP", "PS":
-            self.roshambooLabel.text = "Scissors cuts Paper"
-        case "PR", "RP":
-            self.roshambooLabel.text = "Paper covers Rock"
-        case "RS", "SR":
-            self.roshambooLabel.text = "Rock crushes Scissors"
-        default:
-            self.roshambooLabel.text = "Its a tie!"
+            self.roshambooLabel.text = playerWon(playerMove: self.userValue!, computerMove: self.computerValue!) ? "\(self.roshambooLabel!.text!), you won!" : "\(self.roshambooLabel!.text!), you lose!"
         }
     }
     
